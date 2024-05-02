@@ -1,0 +1,56 @@
+
+
+tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+tool {
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid #666;
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    background: center no-repeat;
+    background-size: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    cursor: pointer;
+}
+
+tool.active {
+    border: 1px solid green;
+    box-shadow: 0 0 4px green;
+}
+
+#tool-hoe {
+    background-image: url(../img/hoe.png);
+}
+
+#tool-sow {
+    background-image: url(../img/seeds.png);
+}
+
+#tool-water {
+    background-image: url(../img/water.png);
+}
+
+#tool-harvest {
+    background-image: url(../img/harvester.png);
+}
+
+@media screen and (max-width: 600px) {
+
+    tool {
+        width: 40px;
+        height: 40px;
+        background-size: 30px;
+    }
+}

@@ -1,0 +1,81 @@
+field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+field-parts {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+field-part {
+    display: flex;
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid #444;
+
+    background: center no-repeat;
+    background-size: contain;
+
+    cursor: pointer;
+}
+
+field-part::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+field-part.grass {
+    background-image: url(../img/grass.png);
+}
+
+field-part.farmland {
+    background-image: url(../img/farmland.png);
+}
+
+field-part.farmland.hydrated {
+    background-image: url(../img/farmland-hydrated.png);
+}
+
+field-part.farmland[data-seed="1"]::after {
+    background-image: url(../img/seed-1.png);
+}
+
+field-part.farmland[data-seed="2"]::after  {
+    background-image: url(../img/seed-2.png);
+}
+
+field-part.farmland[data-seed="3"]::after  {
+    background-image: url(../img/seed-3.png);
+}
+
+field-part.farmland[data-seed="4"]::after  {
+    background-image: url(../img/seed-4.png);
+}
+
+field-part.farmland[data-seed="5"]::after  {
+    background-image: url(../img/seed-5.png);
+}
+
+field-part.farmland[data-seed="6"]::after  {
+    background-image: url(../img/seed-6.png);
+}
+
+field-part.farmland[data-seed="7"]::after  {
+    background-image: url(../img/seed-7.png);
+}
+
+@media screen and (max-width: 600px) {
+
+    field-part {
+        width: 30px;
+        height: 30px;
+    }
+}

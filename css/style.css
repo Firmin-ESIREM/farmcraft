@@ -1,0 +1,40 @@
+@import url(tools.css);
+@import url(field.css);
+@import url(stock.css);
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #222;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body > div {
+    width: 500px;
+
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #eee;
+}
+
+
+@media screen and (max-width: 600px) {
+    body > div {
+        width: 100%;
+    }
+}
