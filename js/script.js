@@ -19,7 +19,7 @@ function fieldAction(fpart) {
         case 'tool-harvest':
             if (fpart.classList.contains('farmland')) {
                 if (fpart.dataset.seed === '7') {
-                    let stockElement = document.querySelector('#stock-wheat');
+                    const stockElement = document.querySelector('#stock-wheat');
                     stockElement.innerText = (parseInt(stockElement.innerText) + 1).toString();
                 }
                 fpart.dataset.seed = '0';
@@ -67,7 +67,7 @@ async function grow() {
         if (fieldPart.classList.contains('hydrated')) {  // dry after 10 seconds
             if (currentTime - parseInt(fieldPart.dataset.hydrated) >= 10) fieldPart.classList.remove('hydrated');
         }
-        if (fieldPart.dataset.seed != '0' && !fieldPart.classList.contains('hydrated')) {
+        if (fieldPart.dataset.seed === '0' && !fieldPart.classList.contains('hydrated')) {
             const randomNum = Math.random();
             if (randomNum < 0.01) {
                 fieldPart.classList.add('grass');
